@@ -1,0 +1,31 @@
+.odometer {
+  .odometer-inside {
+    .odometer-formatting-mark{
+      &.odometer-radix-mark{
+        //display: none;
+      }
+    }
+    .odometer-digit {
+      &:last-child {
+        //display: none
+      }
+      &:nth-last-child(3),
+      &:nth-last-child(2){
+        font-size: .55em;
+        margin-top: -.55em;
+      }
+    }
+    &:after {
+      content: "$";
+      display: inline-block;
+      vertical-align: middle;
+      font-size: .55em;
+      margin-right: .12em;
+      margin-top: -.55em;
+    }
+  }
+  &.odometer-auto-theme,
+  &.odometer-theme-default{
+    font-family: inherit;
+  }
+}
